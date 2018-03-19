@@ -1,6 +1,12 @@
 Rails.application.routes.draw do
-  get 'companys', to: 'companys#index'
 
-  root 'companys#index'
+
+  resources :companies do
+    post 'companies', to:'companies#create'
+  end
+
+  devise_for :users
+  
+  root 'companies#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

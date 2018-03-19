@@ -1,0 +1,19 @@
+<h1 class="jumbotron text-center">Sistema de Reclamos de Empresas</h1>
+
+<div class="row">
+  <% @companies.each do |company| %>
+    <div class="col-md-3">
+      <div class="card text-center" style="margin-top: 30px;">
+        <div class="card-body">
+          <td> Nombre Empresa </td>
+          <h6 class="card-title"><%= company.title %></h5>
+          <td> Email de contacto </td>
+          <p class="card-text"><%= company.contact %></p>
+          <td> Reclamo </td>
+          <p class="card-text"><%= company.claim %></p>
+            <i class="fas fa-cart-plus"></i>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

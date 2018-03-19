@@ -1,0 +1,17 @@
+<div class="jumbotron">
+  <h1 class="text-center">Ingresar una nueva empresa</h1>
+  <div class="form form-center">
+    <div class="col-md-3 form-group">
+      <%= form_with(model: @company) do |f| %>
+        <%= f.label :title, "Nombre de la Empresa" %>
+        <%= f.text_field :title, class:"form-control" %>
+        <%= f.label :claim, "Ingrese su reclamo" %>
+        <%= f.text_area :claim, class:"form-control" %>
+        <%= f.label :contact, "Ingrese su e-mail" %>
+        <%= f.text_field :contact, class:"form-control" %>
+        <br>
+        <%= f.submit 'Enviar' %>
+      <% end %>
+    </div>
+  </div>
+</div>
