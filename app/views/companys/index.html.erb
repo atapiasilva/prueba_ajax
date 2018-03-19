@@ -1,0 +1,10 @@
+<h1 class="jumbotron">Sistema de Reclamos de Empresas</h1>
+
+
+<div class="container">
+  <% @companys.each do |company| %>
+    <h1> <%= company.title %> </h1>
+    <p> <%= company.claim %> </p>
+    <p> <%= company.contact %> </p>
+  <% end %>
+</div>
